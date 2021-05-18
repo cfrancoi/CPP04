@@ -56,7 +56,7 @@ std::ostream &			operator<<( std::ostream & o, AWeapon const & i )
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
-std::string const AWeapon::getName() const
+std::string const & AWeapon::getName() const
 {
 	return _name;
 }

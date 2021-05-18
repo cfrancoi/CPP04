@@ -4,7 +4,7 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Squad::Squad() : _units(NULL)
+Squad::Squad() : _count(0), _units(NULL)
 {
 }
 

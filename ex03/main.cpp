@@ -36,10 +36,12 @@ int main()
 	bob->use(1, *bill);
 	bob->use(2, *bill);
 	bob->use(3, *bill);
+	bob->use(3, *bill);
+	bob->use(3, *bill);
 	bob->use(4, *bill);
 
 	bob->unequip(0);
-	std::cout << "empty index inventory" << std::endl;
+	
 	bob->use(0, *bill);
 
 	std::cout << "destroy :" << std::endl;

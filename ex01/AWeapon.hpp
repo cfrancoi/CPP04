@@ -12,15 +12,15 @@ class AWeapon
 		AWeapon();
 		AWeapon(std::string const &name, int ap_cost, int damage);
 		AWeapon( AWeapon const & src );
-		~AWeapon();
+		virtual ~AWeapon();
 
 
 
 		AWeapon &		operator=( AWeapon const & rhs );
 
-		std::string const getName() const;
-		int				getApCost() const;
-		int				getDamage() const;
+		std::string const & getName() const;
+		int					getApCost() const;
+		int					getDamage() const;
 
 		virtual	void	attack() const = 0;
 

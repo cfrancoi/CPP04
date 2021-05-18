@@ -49,6 +49,8 @@ void Ice::use(ICharacter & user)
 {
 	setXp(_xp + 10);
 	std::cout << "* shoots an ice bolt at " << user.getName() << " *" << std::endl;
+
+	std::cout << "Curent xp : " << _xp << std::endl;
 }
 
 /*

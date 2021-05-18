@@ -77,7 +77,7 @@ int Enemy::getHp(void) const
 	return _hp;
 }
 
-std::string Enemy::getType(void) const
+std::string const & Enemy::getType(void) const
 {
 	return _type;
 }

@@ -48,6 +48,8 @@ void Cure::use(ICharacter &user)
 {
 	_xp += 10;
 	std::cout << "* heals " << user.getName() << "'s wounds *" << std::endl;
+
+	std::cout << "Curent xp : " << _xp << std::endl;
 }
 
 

@@ -9,16 +9,16 @@ class Peon : public Victim
 {
 
 	public:
-
-		Peon();
+		
 		Peon( Peon const & src );
 		Peon(std::string name);
-		~Peon();
+		virtual ~Peon();
 
 		Peon &		operator=( Peon const & rhs );
 
-		void		getPolymorphed(void) const;
+		virtual void		getPolymorphed(void) const;
 	private:
+		Peon();
 
 };
 

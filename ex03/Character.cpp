@@ -106,9 +106,15 @@ void Character::unequip(int index)
 void Character::use(int index, ICharacter& target) 
 {
 	if (index >= _inv_len || index < 0)
+	{
+		std::cerr <<  "inexistant inventory slot" << std::endl; 
 		return;
+	}
 	if (_inv[index] == NULL)
+	{
+		std::cerr << "empty slot" << std::endl;
 		return;
+	}
 	_inv[index]->use(target);
 }
 

@@ -22,11 +22,12 @@ class Character
 		void			equip(AWeapon *ptr);
 		void			attack(Enemy *target);
 
-		std::string		getName(void) const;
-		int				getAp(void) const;
-		AWeapon *		getWeapon(void) const;
+		std::string	const &	getName(void) const;
+		int					getAp(void) const;
+		AWeapon *			getWeapon(void) const;
 
 	private:
+		
 		std::string		_name;
 		int				_ap;
 		AWeapon			*_weapon;

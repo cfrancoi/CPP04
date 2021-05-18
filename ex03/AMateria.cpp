@@ -28,6 +28,11 @@ AMateria::~AMateria()
 	std::cout << _type << " materia was detroy" << std::endl;
 }
 
+void AMateria::use(ICharacter & user) 
+{
+	setXp(_xp + 10);
+	std::cout << user.getName() << " materia gain 10xp" << std::endl;
+}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -38,6 +43,8 @@ AMateria &				AMateria::operator=( AMateria const & rhs )
 	_xp = rhs._xp;
 	return *this;
 }
+
+
 
 std::string const & AMateria::getType() const
 {

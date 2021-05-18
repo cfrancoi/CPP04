@@ -95,7 +95,7 @@ void Character::recoverAP()
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
-std::string Character::getName(void) const
+std::string const & Character::getName(void) const
 {
 	return _name;
 }

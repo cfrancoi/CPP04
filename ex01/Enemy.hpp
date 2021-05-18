@@ -24,8 +24,8 @@ class Enemy
 		Enemy&		operator=( Enemy const & rhs );
 
 
-		int				getHp(void) const;
-		std::string		getType(void) const;
+		int					getHp(void) const;
+		std::string	const &	getType(void) const;
 
 };
 

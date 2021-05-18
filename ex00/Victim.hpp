@@ -9,10 +9,10 @@ class Victim
 
 	public:
 
-		Victim();
+		
 		Victim( Victim const & src );
 		Victim(std::string const name);
-		~Victim();
+		virtual ~Victim();
 
 		virtual void			getPolymorphed(void) const;
 
@@ -21,6 +21,7 @@ class Victim
 		Victim &		operator=( Victim const & rhs );
 
 	protected:
+		Victim();
 		std::string		_name;
 
 };

@@ -6,11 +6,7 @@
 # include "ISquad.hpp"
 # include "ISpaceMarine.hpp"
 
-typedef struct	s_unit
-{
-	ISpaceMarine	*el;
-	struct s_unit	*next;
-}			 	t_unit;
+
 
 
 class Squad : public ISquad
@@ -27,6 +23,12 @@ class Squad : public ISquad
 		int				push(ISpaceMarine *add);
 
 		Squad &		operator=( Squad const & rhs );
+
+		typedef struct	s_unit
+		{
+			ISpaceMarine	*el;
+			struct s_unit	*next;
+		}			 	t_unit;
 
 	private:
 		int				_count;
