@@ -12,9 +12,9 @@ class SuperMutant : public Enemy
 
 		SuperMutant();
 		SuperMutant( SuperMutant const & src );
-		~SuperMutant();
+		virtual ~SuperMutant();
 
-		virtual void		attack(int amount);
+		virtual void		takeDamage(int amount);
 		SuperMutant &		operator=( SuperMutant const & rhs );
 
 	private:

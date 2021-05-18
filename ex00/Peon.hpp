@@ -11,7 +11,7 @@ class Peon : public Victim
 	public:
 		
 		Peon( Peon const & src );
-		Peon(std::string name);
+		Peon(std::string const &name);
 		virtual ~Peon();
 
 		Peon &		operator=( Peon const & rhs );

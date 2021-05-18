@@ -31,7 +31,10 @@ Character::Character( const Character & src )
 	int i = 0;
 	while (i < _inv_len)
 	{
-		_inv[i] = NULL;
+		if (src._inv[i] != NULL)
+			_inv[i] = src._inv[i]->clone();
+		else
+			_inv[i] = 0;
 		i++;
 	}
 	*this = src;

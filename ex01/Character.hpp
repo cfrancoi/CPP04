@@ -11,7 +11,7 @@ class Character
 
 	public:
 
-		Character();
+		
 		Character(std::string const & name);
 		Character( Character const & src );
 		~Character();
@@ -27,7 +27,7 @@ class Character
 		AWeapon *			getWeapon(void) const;
 
 	private:
-		
+		Character();
 		std::string		_name;
 		int				_ap;
 		AWeapon			*_weapon;

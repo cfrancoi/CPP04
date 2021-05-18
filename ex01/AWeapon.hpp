@@ -9,7 +9,7 @@ class AWeapon
 
 	public:
 
-		AWeapon();
+		
 		AWeapon(std::string const &name, int ap_cost, int damage);
 		AWeapon( AWeapon const & src );
 		virtual ~AWeapon();
@@ -25,6 +25,7 @@ class AWeapon
 		virtual	void	attack() const = 0;
 
 	protected:
+		AWeapon();
 		std::string		_name;
 		int				_ap_cost;
 		int				_dmg;

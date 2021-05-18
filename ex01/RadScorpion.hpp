@@ -14,6 +14,8 @@ class RadScorpion : public Enemy
 		RadScorpion( RadScorpion const & src );
 		~RadScorpion();
 
+		//virtual void	takeDamage(int amount);
+
 		RadScorpion &		operator=( RadScorpion const & rhs );
 
 	private:

@@ -13,7 +13,7 @@ Victim::Victim( const Victim & src )
 	*this = src;
 }
 
-Victim::Victim(std::string const name) : _name(name)
+Victim::Victim(std::string const & name) : _name(name)
 {
 	std::cout << "Some random victim called " << _name << " just appeared!" << std::endl;
 }

@@ -1,22 +1,16 @@
-#include "Peon.hpp"
+#include "Eviscerator.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Peon::Peon()
+Eviscerator::Eviscerator() : AWeapon("Eviscerator", 4, 25)
 {
-	
 }
 
-Peon::Peon( const Peon & src )
+Eviscerator::Eviscerator( const Eviscerator & src )
 {
 	*this = src;
-}
-
-Peon::Peon(std::string const & name) : Victim(name)
-{
-	std::cout << "Zog zog..." << std::endl;
 }
 
 
@@ -24,9 +18,13 @@ Peon::Peon(std::string const & name) : Victim(name)
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Peon::~Peon()
+Eviscerator::~Eviscerator()
 {
-	std::cout << "Bleuark..." << std::endl;
+}
+
+void Eviscerator::attack() const
+{
+	std::cout << "* Tsing Tsing *" << std::endl;
 }
 
 
@@ -34,9 +32,11 @@ Peon::~Peon()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Peon &				Peon::operator=( Peon const & rhs )
+Eviscerator &				Eviscerator::operator=( Eviscerator const & rhs )
 {
-	this->_name = rhs.Name();
+	_name = rhs.getName();
+	_ap_cost = rhs.getApCost();
+	_dmg = rhs.getDamage();
 	return *this;
 }
 
@@ -44,10 +44,6 @@ Peon &				Peon::operator=( Peon const & rhs )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void Peon::getPolymorphed(void) const
-{
-	std::cout << _name << " has been turned into a pink pony!" << std::endl;
-}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

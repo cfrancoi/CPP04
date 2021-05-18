@@ -3,6 +3,8 @@
 #include "PowerFist.hpp"
 #include "RadScorpion.hpp"
 #include "SuperMutant.hpp"
+#include "Mutant.hpp"
+#include "Eviscerator.hpp"
 
 int main()
 {
@@ -24,6 +26,8 @@ int main()
     me->attack(b);
     AWeapon *pf = new PowerFist();
 
+   
+
     me->equip(pf);
     me->attack(a);
     me->attack(a);
@@ -43,7 +47,16 @@ int main()
     me->recoverAP();
      std::cout << *me;
 
+    AWeapon *ev = new Eviscerator();
+
+    me->equip(ev);
+
+    me->attack(a);
+    me->attack(a);
+
+    Enemy *c = new Mutant();
+
+    me->attack(c);
 
     return(0);
-
 }

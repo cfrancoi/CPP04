@@ -53,6 +53,7 @@ std::ostream &			operator<<( std::ostream & o, Enemy const & i )
 
 void Enemy::takeDamage(int amount)
 {
+	std::cout << getType() << " take " << amount << " Dmg" << std::endl;
 	if (amount < 0)
 		return;
 	
@@ -64,7 +65,7 @@ void Enemy::takeDamage(int amount)
 	{
 		_hp -= amount;
 	}
-
+	
 }
 
 

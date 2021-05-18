@@ -12,7 +12,7 @@ class PowerFist : public AWeapon
 
 		PowerFist();
 		PowerFist( PowerFist const & src );
-		~PowerFist();
+		virtual ~PowerFist();
 
 		virtual void 	attack() const;
 

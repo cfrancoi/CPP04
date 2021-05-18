@@ -1,15 +1,15 @@
-#include "SuperMutant.hpp"
+#include "Mutant.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
+Mutant::Mutant()
 {
-	std::cout << "Gaah. Me want smash heads!" << std::endl;
+	std::cout << "Gaarh ..." << std::endl;
 }
 
-SuperMutant::SuperMutant( const SuperMutant & src )
+Mutant::Mutant( const Mutant & src )
 {
 	*this = src;
 }
@@ -19,35 +19,16 @@ SuperMutant::SuperMutant( const SuperMutant & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-SuperMutant::~SuperMutant()
+Mutant::~Mutant()
 {
-	std::cout << "Aaargh..." << std::endl;
+	std::cout << "Boargh.." << std::endl;
 }
 
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-SuperMutant &				SuperMutant::operator=( SuperMutant const & rhs )
+void Mutant::takeDamage(int amount) 
 {
-	_hp = rhs.getHp();
-	_type = rhs.getType();
-	return *this;
-}
-
-
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-void		SuperMutant::takeDamage(int amount)
-{
-	amount -= 3;
+	amount *= 2;
 	std::cout << getType() << " take " << amount << " Dmg" << std::endl;
+
 	if (amount < 0)
 		return;
 	
@@ -60,6 +41,23 @@ void		SuperMutant::takeDamage(int amount)
 		_hp -= amount;
 	}
 }
+
+
+/*
+** --------------------------------- OVERLOAD ---------------------------------
+*/
+
+Mutant &				Mutant::operator=( Mutant const & rhs )
+{
+	_hp = rhs.getHp();
+	_type = rhs.getType();
+	return *this;
+}
+
+/*
+** --------------------------------- METHODS ----------------------------------
+*/
+
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

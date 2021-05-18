@@ -12,7 +12,7 @@ class AMateria
 
 	public:
 
-		AMateria();
+		
 		AMateria(std::string const & type);
 		AMateria( AMateria const & src );
 		virtual ~AMateria();
@@ -27,6 +27,7 @@ class AMateria
 		void				setXp(uint value);
 
 	protected:
+		AMateria();
 		uint			_xp;
 		std::string		_type;
 

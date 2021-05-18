@@ -9,9 +9,8 @@ class Victim
 
 	public:
 
-		
 		Victim( Victim const & src );
-		Victim(std::string const name);
+		Victim(std::string const & name);
 		virtual ~Victim();
 
 		virtual void			getPolymorphed(void) const;

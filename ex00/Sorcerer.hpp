@@ -9,8 +9,7 @@ class Sorcerer
 {
 
 	public:
-
-		Sorcerer();
+	
 		Sorcerer(std::string const name, std::string const title);
 		Sorcerer( Sorcerer const & src );
 		~Sorcerer();
@@ -25,6 +24,7 @@ class Sorcerer
 
 
 	private:
+		Sorcerer();
 		std::string		_name;
 		std::string		_title;
 
